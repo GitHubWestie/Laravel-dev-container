@@ -88,7 +88,7 @@ Update the devcontainer.json file as follows
 
     // Commands to run after the container is created.
     // This ensures Laravel installer is available and Xdebug config is applied.
-    "postCreateCommand": "bash -c \"/usr/local/bin/composer global require laravel/installer && echo 'export PATH=\\\"$PATH:$HOME/.composer/vendor/bin\\\"' >> ~/.bashrc && source ~/.bashrc && sudo cp .devcontainer/xdebug-custom.ini /usr/local/etc/php/conf.d/xdebug.ini\"",
+    "postCreateCommand": "bash -c \"/usr/local/bin/composer global require laravel/installer && echo 'export PATH=\\\"$PATH:$HOME/.composer/vendor/bin\\\"' >> ~/.bashrc && source ~/.bashrc && sudo cp .devcontainer/xdebug-custom.ini /usr/local/etc/php/conf.d/xdebug.ini\""
     // ^^^ Ensure '/usr/local/etc/php/conf.d/xdebug.ini' is the correct target for overwriting
 
     // Uncomment to connect as root instead (generally not recommended for daily dev).
