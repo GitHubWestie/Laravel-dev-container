@@ -22,6 +22,12 @@ FROM mcr.microsoft.com/devcontainers/php:1-8.2-bullseye
 # Add any other required PHP extensions here (e.g., pdo_mysql, gd, etc.)
 RUN docker-php-ext-install pcntl pdo_mysql # Add pdo_mysql if you need database connectivity
 
+# Install sqlite3 CLI and clean up apt lists
+# This should be a separate RUN command for clarity and better caching if other apt installs exist.
+RUN apt-get update && \
+    apt-get install -y sqlite3 && \
+    rm -rf /var/lib/apt/lists/*
+
 # You can also add other OS-level packages if needed
 # RUN apt-get update && apt-get install -y <package-name> && rm -rf /var/lib/apt/lists/*
 ```
@@ -82,6 +88,8 @@ Update the devcontainer.json file as follows
                 "felixfbecker.php-debug", // PHP Debug Adapter for Xdebug
                 "onecentlin.laravel-blade", // Blade syntax highlighting
                 "shufo.vscode-blade-formatter" // Blade formatter
+                "alexcvzz.vscode-sqlite", // SQLite viewer
+                "bradlc.vscode-tailwindcss" // Tailwind extension
             ]
         }
     },
