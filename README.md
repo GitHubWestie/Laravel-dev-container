@@ -87,7 +87,7 @@ Update the devcontainer.json file as follows
                 "bmewburn.vscode-intelephense-client", // PHP IntelliSense
                 "felixfbecker.php-debug", // PHP Debug Adapter for Xdebug
                 "onecentlin.laravel-blade", // Blade syntax highlighting
-                "shufo.vscode-blade-formatter" // Blade formatter
+                "shufo.vscode-blade-formatter", // Blade formatter
                 "alexcvzz.vscode-sqlite", // SQLite viewer
                 "bradlc.vscode-tailwindcss" // Tailwind extension
             ]
